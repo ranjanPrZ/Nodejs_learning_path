@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <title>Home Template</title>
+  </head>
+  <body>
+    <h1>Node.js is an open source server environment</h1>
+    <p>
+      Available routes:
+      <% for(let route_path of route_paths){ %>
+        <li><%= route_path %></li>
+      <% } %>
+    </p>
+  </body>
+</html>
