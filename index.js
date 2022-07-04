@@ -2,13 +2,13 @@ const express = require('express');
 const app = express()
 const port = 3000
 const path = require('path')
-// console.log(app)
-// Confirm server is getting request.
-// app.use((req, res) => {
-//   console.log('We got a new request!!')
-//   res.send("<h1>This is my webpage</h1>")
-// })
 
+// Following is used with partial path not absolute
+// It gives error( such as ``Refused to apply style from the created custom_file.css``) if run server outside from application directory.
+// app.use(express.static('public'))
+
+// To make absolute path use following
+app.use(express.static(path.join(__dirname, 'public')))
 
 // Set view engine with EJS
 app.set('view engine', 'ejs');

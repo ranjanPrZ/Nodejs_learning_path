@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device=width, initial-scale=1.0">
     <title>Home Template</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.min.js"></script>
   </head>
   <body>
     <h1>Node.js is an open source server environment</h1>
-    <p>
-      Available routes:
-      <% for(let route_path of route_paths){ %>
-        <li><%= route_path %></li>
-      <% } %>
-    </p>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/cats">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dogs">Pricing</a>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
